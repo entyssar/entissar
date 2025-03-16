@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Événements</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let event of evenements">
+        <ion-label>
+          <h2>{{ event.nom }}</h2>
+          <p>{{ event.date }} - {{ event.heure }}</p>
+          <p>{{ event.lieu }}</p>
+          <p>{{ event.description }}</p>
+        </ion-label>
+        <ion-button *ngIf="role === 'membre'" (click)="sInscrire(event.id)">S'inscrire</ion-button>
+        <ion-button *ngIf="role === 'admin'" (click)="modifierEvent(event)">Modifier</ion-button>
+        <ion-button *ngIf="role === 'admin'" (click)="supprimerEvent(event.id)">Supprimer</ion-button>
+      </ion-item>
+    </ion-list>
+  
+    <ion-card *ngIf="role === 'admin'">
+      <ion-card-header>
+        <ion-card-title>Ajouter/Modifier un événement</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label>Nom</ion-label>
+          <ion-input [(ngModel)]="eventForm.nom"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Date</ion-label>
+          <ion-input type="date" [(ngModel)]="eventForm.date"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Heure</ion-label>
+          <ion-input type="time" [(ngModel)]="eventForm.heure"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Lieu</ion-label>
+          <ion-input [(ngModel)]="eventForm.lieu"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Description</ion-label>
+          <ion-textarea [(ngModel)]="eventForm.description"></ion-textarea>
+        </ion-item>
+        <ion-button (click)="isEditing ? updateEvent() : addEvent()">
+          {{ isEditing ? 'Mettre à jour' : 'Ajouter' }}
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

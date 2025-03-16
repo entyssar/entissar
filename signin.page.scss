@@ -1,0 +1,136 @@
+// Variables
+$primary-color: #000000;
+$secondary-color: #ffffff;
+$accent-color: #B780C1;
+$gradient-start: #8A2BE2;
+$gradient-end: #FF1493;
+$glass-background: rgba(255, 255, 255, 0.1);
+
+// Global Styles
+ion-header {
+  background-color: $primary-color !important;
+}
+
+ion-toolbar {
+  --background: $primary-color;
+  --color: $secondary-color;
+  border-bottom: 1px solid rgba(124, 53, 182, 0.61);
+}
+
+// Menu Styles
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  font-family: 'Poppins', sans-serif;
+  color: $secondary-color;
+  background: transparent;
+  margin: 0.5rem;
+  --color: $secondary-color;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $accent-color;
+    transform: translateY(-2px);
+  }
+}
+
+.sign-in {
+  font-family: 'Poppins', sans-serif;
+  color: $primary-color;
+  background: $secondary-color;
+  border-radius: 50px;
+  margin: 0.5rem;
+  --color: $primary-color;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: $accent-color;
+    color: $secondary-color;
+  }
+}
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40); // Fond dégradé
+}
+
+.signin-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, $gradient-start, $gradient-end);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  
+}
+
+ion-item {
+  margin-bottom: 1.5rem;
+  --background: transparent;
+  --color: #ffffff;
+  --border-color: rgba(255, 255, 255, 0.2); // Bordure légère
+  --highlight-color-focused: #8A2BE2; // Couleur de focus
+  border-radius: 12px; // Coins arrondis
+  transition: all 0.3s ease; // Animation fluide
+
+  
+}
+
+ion-input {
+  --color: #ffffff;
+  --placeholder-color: rgba(255, 255, 255, 0.6); // Couleur du placeholder
+  --padding-start: 16px; // Espacement interne
+}
+
+ion-checkbox {
+  --background: transparent;
+  --border-color: #ffffff;
+  --size: 20px; // Taille de la checkbox
+  margin-right: 10px; // Espacement entre la checkbox et le texte
+}
+ion-label {
+  margin-left: 8px; // Add a small space between the checkbox and the text
+  font-size: 18px; // Adjust font size if needed
+  color: #ffffff; // Set text color
+}
+.signin-button {
+  --background: transparent; // Remove the background color
+  --box-shadow: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, $gradient-start, $gradient-end);
+  border: 2px solid $gradient-end; // Add a pink border (optional)
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+  :hover {
+    transform: translateY(-2px); // Effet de survol
+    box-shadow: 0 6px 12px #0000004d; // Ombre portée au survol
+  }
+  :active {
+    transform: translateY(0); // Effet de clic
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); // Ombre portée au clic
+  }
+}
+
+
+// Style supplémentaire pour le formulaire
+form {
+  width: 100%;
+  max-width: 400px; // Largeur maximale du formulaire
+  background: rgba(255, 255, 255, 0.1); // Fond semi-transparent
+  padding: 2rem;
+  border-radius: 16px; // Coins arrondis
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Ombre portée
+  backdrop-filter: blur(10px); // Effet de flou (glassmorphism)
+}
+

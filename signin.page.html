@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <img src="assets/logo.png" alt="PlayZone Logo" class="logo-img" slot="start" />
+    <div class="menu" slot="end">
+      <ion-button fill="clear" class="nav-button" routerLink="/home">Home</ion-button>
+      <ion-button fill="clear" class="nav-button" routerLink="/events">Events</ion-button>
+      <ion-button fill="clear" class="nav-button" routerLink="/pricing">Pricing</ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="signin-container">
+    <h1 class="signin-title">Welcome</h1>
+    <form (ngSubmit)="onSignIn()">
+      <ion-item>
+        <ion-label position="floating">Email:</ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password:</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox [(ngModel)]="rememberMe" name="rememberMe" position="fixed"></ion-checkbox>
+        <ion-label>Remember Me</ion-label>
+      </ion-item>
+      <ion-button type="submit" expand="full" class="signin-button">Sign In</ion-button>
+    </form>
+  </div>
+</ion-content>

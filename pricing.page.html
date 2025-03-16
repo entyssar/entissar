@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <img src="assets/logo.png" alt="PlayZone Logo" class="logo-img" slot="start" />
+    <div class="menu" slot="end">
+      <ion-button fill="clear" class="nav-button" routerLink="/home">Home</ion-button>
+      <ion-button fill="clear" class="nav-button" routerLink="/events">Events</ion-button>
+      <ion-button fill="clear" class="nav-button" routerLink="/pricing">Pricing</ion-button>
+      <ion-button fill="clear" class="sign-in" routerLink="/signin">Sign In</ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="gradient-text"><em>USE</em></span> YOUR TIME <br />
+        TO <span class="gradient-text"><i>EXERCISE</i></span> <br />
+        REGULARLY
+      </h1>
+      <ion-button class="action-button" fill="solid" routerLink="/join-now">
+        Join Now
+      </ion-button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2 class="section-title">Why Choose PlayZone?</h2>
+    <div class="feature-cards">
+      <div class="feature-card">
+        <ion-icon name="barbell-outline" class="feature-icon"></ion-icon>
+        <h3 class="feature-title">Personalized Training</h3>
+        <p class="feature-description">
+          Get customized workout plans tailored to your goals.
+        </p>
+      </div>
+      <div class="feature-card">
+        <ion-icon name="calendar-outline" class="feature-icon"></ion-icon>
+        <h3 class="feature-title">Flexible Scheduling</h3>
+        <p class="feature-description">
+          Book sessions at your convenience.
+        </p>
+      </div>
+      <div class="feature-card">
+        <ion-icon name="stats-chart-outline" class="feature-icon"></ion-icon>
+        <h3 class="feature-title">Track Progress</h3>
+        <p class="feature-description">
+          Monitor your performance with detailed analytics.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Action Section -->
+  <section class="action-section">
+    <h2 class="section-title">Ready to Transform Your Fitness Journey?</h2>
+    <ion-button class="action-button" fill="solid" routerLink="/sign-up">
+      Sign Up Today
+    </ion-button>
+  </section>
+</ion-content>
